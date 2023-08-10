@@ -3,7 +3,7 @@ let data = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch("https://n8n.epyc.in/webhook/genai");
+    const response = await fetch("https://matrixwebsite.app.n8n.cloud/webhook/genai");
     const responseData = await response.json();
     // Save the data globally
     data = responseData;
