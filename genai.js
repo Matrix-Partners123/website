@@ -107,7 +107,7 @@ function populateCardLayout(data) {
     // _3ColLayout.setAttribute("fs-cmsfilter-element", "list");
 
     sortedCompanies.forEach((company) => {
-      console.log("company", company["Company ID"]);
+      // console.log("company", company["Company ID"]);
       const cardTemplate = `
         <div class="genai-card" data-company='${JSON.stringify(
           company["Company ID"]
@@ -161,7 +161,7 @@ function populateCardLayout(data) {
 
   // Add click event listener to each card in card layout
   const cardElements = document.querySelectorAll(".genai-card");
-  console.log(cardElements);
+  // console.log(cardElements);
   cardElements.forEach((card) => {
     card.addEventListener("click", () => {
       console.log("card clicked before", card.dataset);
