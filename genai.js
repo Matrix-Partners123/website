@@ -3,7 +3,9 @@ let data = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch("https://matrixwebsite.app.n8n.cloud/webhook/genai");
+    const response = await fetch(
+      "https://matrixwebsite.app.n8n.cloud/webhook/genai"
+    );
     const responseData = await response.json();
     // Save the data globally
     data = responseData;
@@ -110,7 +112,8 @@ function populateCardLayout(data) {
       // console.log("company", company["Company ID"]);
       const cardTemplate = `
         <div class="genai-card" data-company='${JSON.stringify(
-          company["Company ID"]
+          // company["Company ID"]
+          company["row_number"]
         )}'>
           <div>
             <div class="genai-card_company-logo-name-wrapper">
@@ -164,18 +167,19 @@ function populateCardLayout(data) {
   // console.log(cardElements);
   cardElements.forEach((card) => {
     card.addEventListener("click", () => {
-      console.log("card clicked before", card.dataset);
-      console.log("data:", data);
+      // console.log("card clicked before", card.dataset);
+      // console.log("data:", data);
       const companyID = card.dataset.company;
       const companyData = data.find((d) => {
-        return d["Company ID"] == companyID;
+        // return d["Company ID"] == companyID;
+        return d["row_number"] == companyID;
       });
-      console.log("companyData", companyData);
+      // console.log("companyData", companyData);
 
       // const companyData = JSON.parse(card.dataset.company);
-      console.log("card clicked");
+      // console.log("card clicked");
       openPopup(companyData);
-      console.log("popup opened");
+      // console.log("popup opened");
     });
   });
 }
