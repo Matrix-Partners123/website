@@ -1,5 +1,6 @@
 //Declare the data variable globally
 let data = [];
+const loader= document.getElementById("loader");
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -13,6 +14,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     populateCardLayout(data);
 
     populateLandscapeLayout(data);
+
+    loader.style.display = "none";
 
     initializeViewToggle();
   } catch (error) {
