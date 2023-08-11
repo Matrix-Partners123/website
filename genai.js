@@ -335,6 +335,7 @@ function openPopup(companyData) {
   stage.textContent = companyData.Stage;
   employee.textContent = companyData["Employee Count Category"];
   if (companyData.Modality !== "") {
+    companyModality.style.display = "block";
     companyModality.textContent = companyData.Modality;
   } else {
     companyModality.style.display = "none";
