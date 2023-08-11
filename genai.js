@@ -1,7 +1,6 @@
 //Declare the data variable globally
 let data = [];
 
-
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch(
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     populateLandscapeLayout(data);
 
-    const loader= document.getElementById("loader");
+    const loader = document.getElementById("loader");
 
     loader.style.display = "none";
 
