@@ -361,21 +361,29 @@ function openPopup(companyData) {
     founder1.style.display = "flex";
     founderName1.textContent = companyData["Founders Name 1"];
     founderLinkedIn1.href = companyData["Founder 1 Linkedin"];
+  } else {
+    founder1.style.display = "none";
   }
   if (companyData["Founders Name 2"] !== "") {
     founder2.style.display = "flex";
     founderName2.textContent = companyData["Founders Name 2"];
     founderLinkedIn2.href = companyData["Founder 2 Linkedin"];
+  } else {
+    founder2.style.display = "none";
   }
   if (companyData["Founders Name 3"] !== "") {
     founder3.style.display = "flex";
     founderName3.textContent = companyData["Founders Name 3"];
     founderLinkedIn3.href = companyData["Founder 3 Linkedin"];
+  } else {
+    founder3.style.display = "none";
   }
   if (companyData["Founders Name 4"] !== "") {
     founder4.style.display = "flex";
     founderName4.textContent = companyData["Founders Name 4"];
     founderLinkedIn4.href = companyData["Founder 4 Linkedin"];
+  } else {
+    founder4.style.display = "none";
   }
 }
 
