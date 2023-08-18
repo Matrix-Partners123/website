@@ -32,12 +32,12 @@ function initializeViewToggle() {
   const cardDiv = document.getElementById("card");
   const landscapeDiv = document.getElementById("landscape");
 
-  cardLayout.setAttribute("fs-cmsfilter-element", "list");
+  // cardLayout.setAttribute("fs-cmsfilter-element", "list");
 
-  landscapeLayout.style.display = "none";
+  cardLayout.style.display = "none";
 
-  // Click the cardDiv on page load
-  cardDiv.dispatchEvent(new Event("click"));
+  // Click the landscapeDiv on page load
+  landscapeDiv.dispatchEvent(new Event("click"));
 
   // Add click event listener to the card div
   cardDiv.addEventListener("click", () => {
